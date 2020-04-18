@@ -660,6 +660,7 @@ section {
 @media only screen and (max-width: 312px) {
   .intro-job {
     padding: 0.5rem 0rem;
+    font-size: 1.3rem;
   }
 }
 
