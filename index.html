@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Greg's Portfolio</title>
-
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -24,6 +23,7 @@
                 </div>
                 <nav>
                     <ul class="nav-links dis-flex">
+                        <li class="close hide"><i class="fas fa-times"></i></li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#profile">Profile</a></li>
                         <li><a href="#skills">Skills</a></li>
@@ -35,6 +35,9 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="dis-flex menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
             <div class="header-image dis-flex" id="main">
                 <div class="overlay">
@@ -139,16 +142,6 @@
                         </div>
                         </div>
                     </div>
-                    
-                    <div class="column is-6-tablet is-4-desktop">
-                        <div class="card has-brand-border">
-                        <div class="card-content">
-                            <div class="content is-flex justify-content-center align-items-center has-background-brand pos-rel">
-                            <h3 class="pos-rel is-size-4">React Js</h3>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
 
                     <div class="column is-6-tablet is-4-desktop">
                         <div class="card has-brand-border">
@@ -174,72 +167,70 @@
                 <div class="columns-container">
                     <div class="columns is-multiline justify-content-center">
                         <div class="column is-6-tablet is-4-desktop">
-                            <div class="current-card has-blue-border">
-                                <div class="current-content">
-                                    <div class="current cl-content is-flex justify-content-center align-items-center has-background-brand pos-rel">
-                                        <h3 class="pos-rel is-size-4">Outdoors</h3>
-                                        <a href="https://outtdoors.herokuapp.com" class="view-site" target="_blank">View Site</a>
+                            <div class="current-card">
+                                <a href="https://outtdoors.herokuapp.com/index.html" target="_blank">
+                                    <div class="box">
+                                        <img src="./assets/img/outdoor.png" alt="outdoor" class="project-image">
+                                        <div class="container">
+                                            <h4><b>Outdoors</b></h4> 
+                                            <p>Adventure</p> 
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="description">
-                                <p>A UI template for booking various adventurous activities. Built with HTML and normal CSS with SASS.</p>
+                                <p>A UI template for booking various adventurous activities. Built with HTML and CSS with SASS.</p>
                             </div>
                         </div>
 
                         <div class="column is-6-tablet is-4-desktop">
-                            <div class="current-card has-blue-border">
-                                <div class="current-content">
-                                    <div class="current cl-content is-flex justify-content-center align-items-center has-background-brand pos-rel">
-                                        <h3 class="pos-rel is-size-4">FilmHouse</h3>
-                                        <a href="http://filmhouseapp.herokuapp.com/" class="view-site" target="_blank">View Site</a>
+                            <div class="current-card">
+                                <a href="http://filmhouseapp.herokuapp.com/" target="_blank">
+                                    <div class="box">
+                                        <img src="./assets/img/filmhouse.jpeg" alt="filmhouse" class="project-image">
+                                        <div class="container">
+                                            <h4><b>Film House</b></h4> 
+                                            <p>Cinema</p> 
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="description">
-                                <p>A UI template for renting films. Built with HTML, CSS, BOOTSTRAP and a tiny little bit of JAVASCRIPT which was used for just the newsletter validation.</p>
+                                <p>A UI template for renting films. Built with HTML, CSS, Bootstrap and a tiny little bit of Javascript which was used for just the newsletter validation.</p>
                             </div>
                         </div>
 
                         <div class="column is-6-tablet is-4-desktop">
-                            <div class="current-card has-blue-border">
-                                <div class="current-content">
-                                    <div class="current cl-content is-flex justify-content-center align-items-center has-background-brand pos-rel">
-                                        <h3 class="pos-rel is-size-4">Face Recognition</h3>
-                                        <a href="https://fazedetect.netlify.com/" class="view-site" target="_blank">View Site</a>
+                            <div class="current-card">
+                                <a href="https://sirstephen.github.io/calculator/" target="_blank">
+                                    <div class="box">
+                                        <img src="./assets/img/calculator.png" alt="calculator" class="project-image">
+                                        <div class="container">
+                                            <h4><b>Calculator</b></h4> 
+                                            <p>Arithmetics</p> 
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="description">
-                                <p>A functional app that detects faces in a picture by pasting the url link of the picture in an input field. This was built with React Js and Node Js with Postgresql.</p>
+                                <p>An online calculator built with HTML, CSS and Javascript.</p>
                             </div>
                         </div>
 
                         <div class="column is-6-tablet is-4-desktop">
-                            <div class="current-card has-blue-border">
-                                <div class="current-content">
-                                    <div class="current cl-content is-flex justify-content-center align-items-center has-background-brand pos-rel">
-                                        <h3 class="pos-rel is-size-4">RoboFriends</h3>
-                                        <a href="https://fazedetect.netlify.com/" class="view-site" target="_blank">View Site</a>
+                        <div class="current-card">
+                            <a href="https://sirstephen.github.io/molegame/" target="_blank">
+                                <div class="box">
+                                    <img src="./assets/img/molegame.png" alt="molegame" class="project-image">
+                                    <div class="container">
+                                        <h4><b>Mole Game</b></h4> 
+                                        <p>Game</p> 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="description">
-                                <p>A playful app to meet robots. This was built with React Js.</p>
-                            </div>
-                        </div>
-
-                        <div class="column is-6-tablet is-4-desktop">
-                        <div class="current-card has-blue-border">
-                            <div class="current-content">
-                            <div class="current cl-content is-flex justify-content-center align-items-center has-background-brand pos-rel">
-                                <h3 class="pos-rel is-size-4">Github Battle</h3>
-                                <a href="https://githubfight.firebaseapp.com/" class="view-site" target="_blank">View Site</a>
-                            </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="description">
-                            <p>An app where two github accounts battle with the number of followers, repos and stars they have. This was built with React Js.</p>
+                            <p>An online game to feed the moles. Built with HTML, CSS and Javascript.</p>
                         </div>
                         </div>
                     </div>
@@ -247,22 +238,24 @@
             </div>
         </section>
 
+        <!-- form -->
         <section class="contact-section">
             <div class="container contact">
                 <div class="row">
                     <div class="col-12">
                         <div class="contact-form">
-                            <form action="mailto:itobitoast@gmail.com" method="post" class="form" novalidate>
+                            <form id="form">
+                                <input id='contact-number' type="hidden" name="contact_number">
                                 <div class="contact-head">
-                                    <h2>Hire me! Send me message</h2>
+                                    <h2>Hire me! Send me a message</h2>
                                 </div>
                                 <div class="form-group form-group-margin">
-                                    <input type="text" class="form-input" placeholder="First Name" id="name">
+                                    <input type="text" class="form-input" placeholder="Full Name" id="name" required>
                                     <label for="name" class="form-label">Name</label>
                                     <span class="error-form" id="name-error-message"></span>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-input" placeholder="Email Address" id="email">
+                                    <input type="email" class="form-input" placeholder="Email Address" id="email" required>
                                     <label for="email" class="form-label">Email Address</label>
                                     <span class="error-form" id="email-error-message"></span>
                                 </div>
@@ -272,7 +265,9 @@
                                     <span class="error-form" id="message-error-message"></span>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn" id="submit">Send Message</button>
+                                    <button class="btn" id="submit">
+                                        <i class="fa fa-spinner fa-spin hide"></i>&nbsp;Send Message
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -313,7 +308,9 @@
         </div>
     </footer>
 
-    <script src="./assets/js/animeText.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/animeText.js"></script>
 </body>
 </html>

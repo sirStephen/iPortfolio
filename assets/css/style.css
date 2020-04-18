@@ -276,10 +276,14 @@ section {
 
 .current-card {
   background-color: white;
-  box-shadow: 0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);
   max-width: 100%;
   position: relative;
   margin: 1rem;
+  color: #005C7F;
+}
+
+.current-card a {
+  text-decoration: none;
   color: #005C7F;
 }
 
@@ -311,7 +315,7 @@ section {
 
 .view-site {
   display: block;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border: 0.1rem solid #005C7F;
   font-size: 1.2rem;
   margin-top: 1rem;
@@ -438,6 +442,16 @@ section {
 	animation: sideSlide .5s forwards;
 }
 
+.box {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 @keyframes sideSlide {
 	60% {
 		transform: translate(20px, 0) scale(1);
@@ -552,6 +566,22 @@ section {
     font-weight: 700;
 }
 
+.project-image {
+  width: 100%;
+  height: 190px;
+}
+
+.hide {
+  display: none;
+}
+
+.menu {
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: none;
+}
+
 @media only screen and (max-width: 1048px) {
   .column.is-4-desktop {
     width: 50%;
@@ -571,12 +601,52 @@ section {
     width: 100%;
   }
 
+  .nav-container {
+    padding: 0;
+  }
+  
   .nav-links {
-    display: none;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    z-index: 10;
+    background-color: #005C7F;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    justify-content: space-evenly;
+    width: 85%;
+    text-align: left;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
   }
 
   .contact {
     width: 100%;
+  }
+
+  .nav-links li:last-child {
+    padding: 0 2rem;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(5rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0rem);
+    }
   }
 }
 
@@ -591,5 +661,21 @@ section {
   .intro-job {
     padding: 0.5rem 0rem;
   }
+}
 
+.nav-active {
+  transform: translateX(0%);
+}
+
+.close {
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
