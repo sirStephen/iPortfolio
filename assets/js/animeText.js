@@ -26,7 +26,7 @@ TxtRotate.prototype.tick = function() {
   }, 50);
 };
 
-window.onload = function() {
+
   var elements = document.getElementsByClassName('txt-rotate');
   for (var i=0; i<elements.length; i++) {
     var toRotate = elements[i].getAttribute('data-rotate');
@@ -41,4 +41,3 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate >";
 //   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #ffffff }";
   document.body.appendChild(css);
-};

@@ -575,6 +575,10 @@ section {
   display: none;
 }
 
+.gone {
+  display: none;
+}
+
 .menu {
   font-size: 3rem;
   padding: 0.5rem;
@@ -636,18 +640,6 @@ section {
   .menu {
     display: block;
   }
-
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(5rem);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateX(0rem);
-    }
-  }
 }
 
 @media only screen and (max-width: 516px) {
@@ -677,6 +669,14 @@ section {
   display: block;
 }
 
-.hide {
-  display: none;
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
 }

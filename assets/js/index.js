@@ -1,7 +1,68 @@
 (function(){
     emailjs.init('user_E3YPdTZlyU0HxmDIs86rp');
 })();
-window.onload = () => {
+
+const navSlide = () => {
+    let menu = document.querySelector('.menu');
+    let nav = document.querySelector('.nav-links');
+    let navLinks = document.querySelectorAll('.nav-links li');
+    let close = document.querySelector('.close');
+    
+    menu.addEventListener('click', (event) => {
+        event.preventDefault();
+        nav.classList.add('nav-active');
+        close.classList.remove('gone');
+        close.classList.add('display');
+    
+        navLinks.forEach((link, index) => {
+            // if (link.style.animation) {
+            //     link.style.animation = '';
+            // } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                console.log(index/7)
+            // }
+        })
+    })
+
+    close.addEventListener('click', (event) => {
+        event.preventDefault();
+        nav.classList.remove('nav-active');
+        close.classList.remove('display');
+        close.classList.add('gone');
+    })
+}
+
+navSlide();
+
+var TxtRotate = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+  
+  TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+  
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+  
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  
+    var that = this;
+    setTimeout(function() {
+      that.tick();
+    }, 50);
+  };
+  
+  window.onload = () => {
     let form = document.querySelector('#form');
     let name = document.querySelector('#name');
     let email = document.querySelector('#email');
@@ -13,8 +74,9 @@ window.onload = () => {
     
     const validation = () => {
         form.addEventListener('submit', (event) => {
-            hide.classList.remove('hide');
             event.preventDefault();
+            hide.classList.remove('hide');
+            console.log(hide);
             if (name.value === '' || name.value === null) {
                 event.preventDefault();
                 nameError.textContent = 'Please fill name field';
@@ -67,37 +129,21 @@ window.onload = () => {
         })
         
     }
+
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate >";
+  //   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #ffffff }";
+    document.body.appendChild(css);
+
     validation();
 }
-
-const navSlide = () => {
-    let menu = document.querySelector('.menu');
-    let nav = document.querySelector('.nav-links');
-    let navLinks = document.querySelectorAll('.nav-links li');
-    let close = document.querySelector('.close');
-    
-    menu.addEventListener('click', (event) => {
-        event.preventDefault();
-        nav.classList.add('nav-active');
-        close.classList.remove('hide');
-        close.classList.add('display');
-    
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-                console.log(index/7)
-            }
-        })
-    })
-
-    close.addEventListener('click', (event) => {
-        event.preventDefault();
-        nav.classList.remove('nav-active');
-        close.classList.remove('display');
-        close.classList.add('hide');
-    })
-}
-
-navSlide();
