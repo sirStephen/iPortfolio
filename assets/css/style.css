@@ -652,7 +652,8 @@ section {
 
 @media only screen and (max-width: 516px) {
   .intro-job {
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
+    font-size: 1.3rem;
     padding: 0.5rem 5rem;
   }
 }
@@ -660,7 +661,6 @@ section {
 @media only screen and (max-width: 312px) {
   .intro-job {
     padding: 0.5rem 0rem;
-    font-size: 1.3rem;
   }
 }
 
