@@ -155,8 +155,11 @@ section {
 
 .profile-pic-container {
   width: 20rem;
-  height: auto;
   margin: 0 auto;
+  width: 20rem;
+  overflow: hidden;
+  height: 20rem;
+  border-radius: 180rem;
 }
 
 .profile-pic {
