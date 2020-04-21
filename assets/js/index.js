@@ -62,7 +62,7 @@ var TxtRotate = function(el, toRotate, period) {
     }, 50);
   };
   
-  window.onload = () => {
+//   window.onload = () => {
     let form = document.querySelector('#form');
     let name = document.querySelector('#name');
     let email = document.querySelector('#email');
@@ -146,4 +146,4 @@ var TxtRotate = function(el, toRotate, period) {
     document.body.appendChild(css);
 
     validation();
-}
+// }
