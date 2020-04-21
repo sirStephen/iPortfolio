@@ -23,6 +23,7 @@ body {
   font-size: 1.9rem;
   font-weight: 400;
   color: white;
+  scroll-behavior: smooth;
 }
 
 .align-items-center {
